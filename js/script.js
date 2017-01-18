@@ -99,22 +99,21 @@ for(i=0; i<=tableau.length-1; i++) {                    	//Boucle pour afficher 
 
 /////////////////////////////////////////Fonction recherche//////////////////////////////////////////////////
 /*Ne fonctionne pas*/
-function recherche(){
-	document.getElementById('resultat').innerHTML='';
-	nomCherche = (prompt('Veuillez entrer votre nom')).toUpperCase(); //Recupère l'entrée utilisateur et la met en majuscule
-	tableau = tableau.toUpperCase();        	//Mettre le tableau en majuscule pour la comparaison 
-	for(i=0; i<=tableau.length-1; i++) {         //Boucle pour afficher le contenu du tableau//                       	
-	   if(nomCherche == tableau[i][1]){           //Cherche une correspondance et si oui :       	
-	var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne
+//function recherche(){
+	//document.getElementById('resultat').innerHTML='';
+	//nomCherche = (prompt('Veuillez entrer votre nom')).toUpperCase(); //Recupère l'entrée utilisateur et la met en majuscule
+	//tableau = tableau.toUpperCase();        	//Mettre le tableau en majuscule pour la comparaison 
+	//for(i=0; i<=tableau.length-1; i++) {         //Boucle pour afficher le contenu du tableau//                       	
+	   //if(nomCherche == tableau[i][1]){           //Cherche une correspondance et si oui :       	
+	//var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne
 
-	var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule qui prend le classement
-	colonne1.innerHTML += tableau[i][0];
+	//var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule qui prend le classement
+	//colonne1.innerHTML += tableau[i][0];
 
-	var colonne2 = ligne.insertCell(1);//on ajoute la seconde cellule qui prend le nom
-	colonne2.innerHTML += tableau[i][1];
+	//var colonne2 = ligne.insertCell(1);//on ajoute la seconde cellule qui prend le nom
+	//colonne2.innerHTML += tableau[i][1];
 
-	var colonne3 = ligne.insertCell(2); //on ajoute la troisième cellule qui prend le n° de dossard
-	colonne3.innerHTML += tableau[i][2];  
-	}
-}
-}
+	//var colonne3 = ligne.insertCell(2); //on ajoute la troisième cellule qui prend le n° de dossard
+	//colonne3.innerHTML += tableau[i][2];  
+	//}
+//}
