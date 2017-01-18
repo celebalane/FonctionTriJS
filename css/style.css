@@ -1,0 +1,32 @@
+/*/////////////////////Style a faire////////////////////////////*/
+
+header .col-md-12 {
+	background-color: #9d0c26;
+	padding-bottom: 2%;
+}
+span {
+	margin-top: 2%;
+	color : white;
+}
+nav{
+	padding-top: 2%;
+}
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+a {
+	font-size: 1.5em;
+	font-weight: 600;
+	text-decoration: none;
+	color:#d0d0d0;
+}
+
+.col-md-9 {
+	padding-top: 3%;
+}
+
+#liste li {
+	background-color: #ddd9d9;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Résultats 2016 | Vin'Scène en bourbonnais</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section class="container">
+		<header class="row">
+			<div class="col-md-12">
+				<span class="fa fa-facebook-square fa-2x pull-right"></span>
+				<span class="fa fa-google-plus-square fa-2x pull-right"></span>
+			</div>
+		</header>
+		<nav class="row">
+			<div class="col-md-12">
+				<ul class="list-unstyled">
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Inscription</a></li>
+				<li><a href="#">8ème édition</a></li>
+				<li><a href="#">Edition précédentes</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section class="row">
+			<div class="btn-group-vertical col-md-3" role="group" aria-label="..."> <!--Section des options de tri-->
+				<h2>Tri par :</h2>
+  				<button type="button" class="btn btn-default" onclick="classement()">Classement</button>
+  				<button type="button" class="btn btn-default" onclick="nom()">Nom</button>
+  				<button type="button" class="btn btn-default" onclick="dossard()">N° Dossard</button>
+			</div>
+			<div class="col-md-9">
+				<h1>Résultats</h1>
+				<table class="table table-striped"> <!--Tableau de classement-->
+                 	<thead> 
+                 		<tr> 
+                 			<td>Classement</td> 
+                 			<td>Nom</td> 
+                 			<td>N° Dossard</td>
+                 		</tr> 
+         			</thead> 
+         			<tbody id="resultat"> <!--Reste vide, sera rempli par le js-->
+                 	</tbody> 
+				</table>
+			</div>
+		</section>
+	</section>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
