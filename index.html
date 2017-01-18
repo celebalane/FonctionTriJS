@@ -10,28 +10,34 @@
 </head>
 <body>
 	<section class="container">
-		<header class="row">
+		<header class="row"> <!--Barre icone rouge-->
 			<div class="col-md-12">
-				<span class="fa fa-facebook-square fa-2x pull-right"></span>
-				<span class="fa fa-google-plus-square fa-2x pull-right"></span>
+				<span class="fa fa-search pull-right"></span>
+				<span class="fa fa-google-plus pull-right"></span>
+				<span class="fa fa-facebook pull-right"></span>
 			</div>
 		</header>
 		<nav class="row">
-			<div class="col-md-12">
+			<div class="col-md-12"> <!--Barre de navigation horizontale-->
 				<ul class="list-unstyled">
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Inscription</a></li>
-				<li><a href="#">8ème édition</a></li>
-				<li><a href="#">Edition précédentes</a></li>
+					<li><a href="#"><span id="vert">ACCUEIL</span></a></li>
+					<li><a href="#">INSCRIPTION</a></li>
+					<li><a href="#">8ÈME ÉDITION 2016</a></li>
+					<li><a href="#">ÉDITIONS PRÉCÉDENTES</a></li>
+					<li><a href="#">QUI SOMMES-NOUS ?</a></li>
+					<li><a href="#">PARTENAIRES</a></li>
+					<li><a href="#">NOUS CONTACTER</a></li>
 				</ul>
 			</div>
 		</nav>
 		<section class="row">
-			<div class="btn-group-vertical col-md-3" role="group" aria-label="..."> <!--Section des options de tri-->
-				<h2>Tri par :</h2>
+			<div class="btn-group-vertical col-md-2 " role="group" aria-label="..."> <!--Section des options de tri-->
+				<h2 class="text-center">Tri par </h2>
+				
   				<button type="button" class="btn btn-default" onclick="classement()">Classement</button>
   				<button type="button" class="btn btn-default" onclick="nom()">Nom</button>
   				<button type="button" class="btn btn-default" onclick="dossard()">N° Dossard</button>
+  				
 			</div>
 			<div class="col-md-9">
 				<h1>Résultats</h1>

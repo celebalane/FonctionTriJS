@@ -1,32 +1,90 @@
-/*/////////////////////Style a faire////////////////////////////*/
+/*/////////////////////Général////////////////////////////*/
+.container {
+	width:100%;
+	font-family: Arial, sans-serif;
+}
 
-header .col-md-12 {
+/*/////////////////////Header rouge////////////////////////////*/
+
+header .col-md-12 {            /*Colonnes contenant le header*/
 	background-color: #9d0c26;
-	padding-bottom: 2%;
-}
-span {
-	margin-top: 2%;
-	color : white;
-}
-nav{
-	padding-top: 2%;
-}
-nav ul {
-	display: flex;
-	justify-content: space-around;
+	padding-bottom: 1.5%;
+	padding-right: 5%;
 }
 
-a {
-	font-size: 1.5em;
+.fa {                    /*Icone*/
+	padding-top: 1.5%;
+	padding-right: 1%;
+	font-size: 1.3em;
+	color: white;
+}
+
+/*/////////////////////Menu////////////////////////////*/
+
+nav ul {                          /*Contenant de la liste et donc des liens*/
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li {
+	margin-top: 5%;
+	margin-right: 4%;
+}
+
+a {	                           /*Liens en eux-même*/
+	font-size: 1.1em;
 	font-weight: 600;
 	text-decoration: none;
 	color:#d0d0d0;
 }
 
-.col-md-9 {
+a:hover {                    /*Quand la souris survol le lien*/
+	text-decoration: none;
+	color:#76b72a;
+}
+
+#vert {                      /*Cible Accueil*/
+	color: #76b72a;
+}
+
+/*/////////////////////Boutons otpions de tri////////////////////////////*/
+
+.col-md-2{                    /*Colonnes contenant les options*/
+	margin-top: 2.8%;
+}
+
+h2 {                         /*Titre*/
+	margin-bottom: 15%;
+}
+
+.btn-default {               /*Boutons*/
+	margin-bottom: 2%;
+	font-size: 1.3em;
+	color: white;
+	background-color:#9d0c26; 
+	border: none;
+}
+
+.btn-default:hover {         /*Quand la souris survol le bouton*/
+	background-color:#7a0d1f;
+	color: white;
+}
+
+.btn-default:focus {         /*Quand le bouton a été cliqué*/
+	background-color:#7a0d1f;
+	color: white;
+}
+
+/*/////////////////////Tableau des résultats////////////////////////////*/
+
+.col-md-9 {                    /*Colonnes contenant le tableau des résultats*/
 	padding-top: 3%;
 }
 
-#liste li {
-	background-color: #ddd9d9;
+thead td {                     /*Titre des colonnes du tableau*/
+	font-size: 1.5em;
 }
+.table-striped > tbody > tr:nth-of-type(odd) { /*couleur du tableau une ligne sur 2*/
+  background-color: #ceff93;
+}
+
