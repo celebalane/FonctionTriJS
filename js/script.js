@@ -7,32 +7,27 @@ var tableau = liste2.concat(liste);                       //Addition des deux ta
 
 function classementNombre(a,b) {                                    //Fonction de classement qui sera utilisé par sort
 	if (parseInt(a) < parseInt(b)) {                                //parseInt permet de bien comparer des nombres et non des strings
-       return -1;
+       return -1;                                                   //Si a<b retourne -1 a .sort pour lui indiqué l'infériorité
    } 
-   else if (parseInt(a) > parseInt(b)) {
+   else if (parseInt(a) > parseInt(b)) {                            //Si a>b retourne 1 a .sort pour lui indiqué la supériorité
      return 1;
    }
-   else {
-    return 0;
+   else {                                                           //a=b retourne 0 pour indiqué une égalité
+    return 0; 
    }
 }
   	
-function classement() {   //Fonction appelée par le bouton classement
-document.getElementById('resultat').innerHTML ='';          //Reset de la liste
-for(i=0; i<=tableau.length-1; i++) {                    	//Boucle pour afficher le contenu du tableau//
-	tableau1 = tableau.sort(classementNombre);           	//On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau             
+function classement() {                                                  //Fonction appelée par le bouton classement
+	document.getElementById('resultat').innerHTML ='';                   //Reset de la liste
+	for(i=0; i<=tableau.length-1; i++) {                                 //Boucle pour afficher le contenu du tableau//
+		var ligne = document.getElementById('resultat').insertRow(-1);   //On crée une nouvelle ligne
+		for(j=0; j<=tableau[i].length-1;j++) {                          //Boucle pour afficher le contenu des sous tableaux 
+			tableau1 = tableau.sort(classementNombre);           	    //On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau             
 
-	var ligne = document.getElementById('resultat').insertRow(-1);
-
-	var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule
-	colonne1.innerHTML += tableau[i][0];
-
-	var colonne2 = ligne.insertCell(1);//on ajoute la seconde cellule
-	colonne2.innerHTML += tableau[i][1];
-
-	var colonne3 = ligne.insertCell(2);
-	colonne3.innerHTML += tableau[i][2]; 
-}
+			var colonne1 = ligne.insertCell(j);	                        //on ajoute une nouvelle cellule pour chaque objet
+			colonne1.innerHTML += tableau[i][j];
+		}
+	}
 }
 
 ///////////////////////////////////////////Tri croissant par dossard//////////////////////////////////////
@@ -50,20 +45,17 @@ function classementDossard(a,b) {                           //Fonction de classe
 }
 
 function dossard() {
-	document.getElementById('resultat').innerHTML='';       //Reset de la liste
-for(i=0; i<=tableau.length-1; i++) {                    	//Boucle pour afficher le contenu du tableau//
-	tableau2 = tableau.sort(classementDossard);          	//On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau         
-	var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne
+	document.getElementById('resultat').innerHTML='';                     //Reset de la liste
+	for(i=0; i<=tableau.length-1; i++) {                                 //Boucle pour afficher le contenu du tableau//
+		var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne
+		for(j=0; j<=tableau[i].length-1;j++) {                          //Boucle pour afficher le contenu des sous tableaux 
 
-	var colonne1 = ligne.insertCell(0);	//on a une ajouté une cellule qui prend le classement
-	colonne1.innerHTML += tableau[i][0];
-
-	var colonne2 = ligne.insertCell(1);	//on ajoute la seconde cellule qui prend le nom
-	colonne2.innerHTML += tableau[i][1];
-
-	var colonne3 = ligne.insertCell(2); //on ajoute la troisième cellule qui prend le n° de dossard
-	colonne3.innerHTML += tableau[i][2];   
-}
+            tableau2 = tableau.sort(classementDossard);          	    //On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau         
+		
+			var colonne1 = ligne.insertCell(j);	                        //on ajoute une nouvelle cellule pour chaque objet
+			colonne1.innerHTML += tableau[i][j];
+		}  
+	}
 }
 
 /////////////////////////////////////////Tri par nom//////////////////////////////////////////////////
@@ -81,24 +73,25 @@ function classementNom(a,b) {                             //Fonction de classeme
 }
 
 function nom() {
-	document.getElementById('resultat').innerHTML='';       //Reset de la liste
-for(i=0; i<=tableau.length-1; i++) {                    	//Boucle pour afficher le contenu du tableau//
-	tableau3 = tableau.sort(classementNom);              	//On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau     
-	var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne
-
-	var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule qui prend le classement
-	colonne1.innerHTML += tableau[i][0];
-
-	var colonne2 = ligne.insertCell(1);//on ajoute la seconde cellule qui prend le nom
-	colonne2.innerHTML += tableau[i][1];
-
-	var colonne3 = ligne.insertCell(2); //on ajoute la troisième cellule qui prend le n° de dossard
-	colonne3.innerHTML += tableau[i][2];  
-}
+	document.getElementById('resultat').innerHTML='';                    //Reset de la liste
+	for(i=0; i<=tableau.length-1; i++) {                                 //Boucle pour afficher le contenu du tableau//
+		var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne 
+		for(j=0; j<=tableau[i].length-1;j++) {                   	
+		tableau3 = tableau.sort(classementNom);              	        //On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau     
+		var colonne1 = ligne.insertCell(j);                             //on ajoute une nouvelle cellule pour chaque objet
+		colonne1.innerHTML += tableau[i][j];
+		}  
+	}
 }
 
 /////////////////////////////////////////Fonction recherche//////////////////////////////////////////////////
 /*Ne fonctionne pas*/
+//function recherche(){
+//var entree = utilisateur.getAttribute('value'); essai de récupération d'entrée utilisateur
+//alert(entree);
+//}
+
+
 //function recherche(){
 	//document.getElementById('resultat').innerHTML='';
 	//nomCherche = (prompt('Veuillez entrer votre nom')).toUpperCase(); //Recupère l'entrée utilisateur et la met en majuscule
