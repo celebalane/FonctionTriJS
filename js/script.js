@@ -87,7 +87,8 @@ function nom() {
 /////////////////////////////////////////Fonction recherche//////////////////////////////////////////////////
 /*Ne fonctionne pas*/
 //function recherche(){
-//var entree = utilisateur.getAttribute('value'); essai de récupération d'entrée utilisateur
+//var	saisie = document.getElementById('saisie');
+//var entree = saisie.getAttribute('value'); //essai de récupération d'entrée utilisateur par l'attribut value de l'id saisie
 //alert(entree);
 //}
 
