@@ -7,9 +7,9 @@ var tableau = liste2.concat(liste);                       //Addition des deux ta
 
 function classementNombre(a,b) {                                    //Fonction de classement qui sera utilisé par sort
 	if (parseInt(a) < parseInt(b)) {                                //parseInt permet de bien comparer des nombres et non des strings
-       return -1;                                                   //Si a<b retourne -1 a .sort pour lui indiqué l'infériorité
+       return -1;                                                   //Si a<b retourne -1 à .sort pour lui indiqué l'infériorité
    } 
-   else if (parseInt(a) > parseInt(b)) {                            //Si a>b retourne 1 a .sort pour lui indiqué la supériorité
+   else if (parseInt(a) > parseInt(b)) {                            //Si a>b retourne 1 à .sort pour lui indiqué la supériorité
      return 1;
    }
    else {                                                           //a=b retourne 0 pour indiqué une égalité
@@ -20,12 +20,12 @@ function classementNombre(a,b) {                                    //Fonction d
 function classement() {                                                  //Fonction appelée par le bouton classement
 	document.getElementById('resultat').innerHTML ='';                   //Reset de la liste
 	for(i=0; i<=tableau.length-1; i++) {                                 //Boucle pour afficher le contenu du tableau//
-		var ligne = document.getElementById('resultat').insertRow(-1);   //On crée une nouvelle ligne
+		var ligne = document.getElementById('resultat').insertRow(-1);   //On crée une nouvelle ligne à la fin (-1) du tableau
 		for(j=0; j<=tableau[i].length-1;j++) {                          //Boucle pour afficher le contenu des sous tableaux 
 			tableau1 = tableau.sort(classementNombre);           	    //On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau             
 
-			var colonne1 = ligne.insertCell(j);	                        //on ajoute une nouvelle cellule pour chaque objet
-			colonne1.innerHTML += tableau[i][j];
+			var colonne1 = ligne.insertCell(j);	                        //On ajoute une nouvelle cellule pour chaque objet
+			colonne1.innerHTML += tableau[i][j];                        //On écrit le contenu de la nouvelle cellule
 		}
 	}
 }
@@ -47,13 +47,13 @@ function classementDossard(a,b) {                           //Fonction de classe
 function dossard() {
 	document.getElementById('resultat').innerHTML='';                     //Reset de la liste
 	for(i=0; i<=tableau.length-1; i++) {                                 //Boucle pour afficher le contenu du tableau//
-		var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne
+		var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne à la fin (-1) du tableau
 		for(j=0; j<=tableau[i].length-1;j++) {                          //Boucle pour afficher le contenu des sous tableaux 
 
             tableau2 = tableau.sort(classementDossard);          	    //On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau         
 		
-			var colonne1 = ligne.insertCell(j);	                        //on ajoute une nouvelle cellule pour chaque objet
-			colonne1.innerHTML += tableau[i][j];
+			var colonne1 = ligne.insertCell(j);	                        //On ajoute une nouvelle cellule pour chaque objet
+			colonne1.innerHTML += tableau[i][j];                         //On écrit le contenu de la nouvelle cellule
 		}  
 	}
 }
@@ -75,11 +75,11 @@ function classementNom(a,b) {                             //Fonction de classeme
 function nom() {
 	document.getElementById('resultat').innerHTML='';                    //Reset de la liste
 	for(i=0; i<=tableau.length-1; i++) {                                 //Boucle pour afficher le contenu du tableau//
-		var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne 
+		var ligne = document.getElementById('resultat').insertRow(-1);  //On ajoute une ligne à la fin (-1) du tableau
 		for(j=0; j<=tableau[i].length-1;j++) {                   	
 		tableau3 = tableau.sort(classementNom);              	        //On applique la fonction de classement précédemment créée et on met le tout dans un nouveau tableau     
-		var colonne1 = ligne.insertCell(j);                             //on ajoute une nouvelle cellule pour chaque objet
-		colonne1.innerHTML += tableau[i][j];
+		var colonne1 = ligne.insertCell(j);                             //On ajoute une nouvelle cellule pour chaque objet
+		colonne1.innerHTML += tableau[i][j];                             //On écrit le contenu de la nouvelle cellule
 		}  
 	}
 }
