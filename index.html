@@ -36,9 +36,17 @@
 					<button type="button" class="btn btn-default" onclick="classement()">Classement</button>
 	  				<button type="button" class="btn btn-default" onclick="nom()">Nom</button>
 	  				<button type="button" class="btn btn-default" onclick="dossard()">N° Dossard</button>
-	  				<!--<h3>Recherche par Nom</h2>
-	  				<input type="text" class="form-control" placeholder="Search" value="" id="saisie" >
-	  				<button type="button" class="btn btn-default" onclick="recherche()">Entrée</button> Lier le bouton-->
+	  				<h2 class="text-center">Recherche par </h2>
+	  				<form class="navbar-form"> <!--Formulaire qui contient le champ de saisie pour une recherche par nom-->
+	  					<div class="form-group">
+	  						<h4>Numéro de classement</h4>
+	  						<input type="text" class="form-control" placeholder="Ex : 1" value="" id="saisie1" >
+	  				 		<button type="button" class="btn btn-default" onclick="rechercheClassement()">Entrée</button>
+	  				 		<h4>Numéro de Dossard</h4>
+	  				 		<input type="text" class="form-control" placeholder="Ex : 1" value="" id="saisie2" >
+	  				 		<button type="button" class="btn btn-default" onclick="rechercheDossard()">Entrée</button>
+	  					</div> 
+	  				</form>
 	  			</div>
 				<div class="col-md-9">
 					<h1>Résultats</h1>
